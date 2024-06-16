@@ -1,5 +1,8 @@
 buildscript {
     repositories {
+        maven {
+            url = 'https://repo.enak.kr/repository/minecraftforge/'
+        }
         maven { url = 'https://maven.minecraftforge.net' }
         maven { url = 'https://maven.parchmentmc.org' }
         mavenCentral()

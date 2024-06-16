@@ -26,7 +26,7 @@ public class CropHarvesterFrontAttachment extends BaseHarvesterFrontAttachment {
         var dropPos = this.pos();
         var world = world();
         for (var drop : drops) {
-            if (!replanted && drop.getItem() instanceof BlockItem item) {
+            if (!replanted && drop.getItem() instanceof BlockItem item && !item.getClass().getCanonicalName().toLowerCase().contains("itempamfoodseed")) {
                 var newState = item.getBlock().defaultBlockState();
                 if (newState.canSurvive(world, pos)) {
                     world.setBlockAndUpdate(pos, newState);
